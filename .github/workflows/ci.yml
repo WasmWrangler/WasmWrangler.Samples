@@ -1,0 +1,22 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Install .NET 5.0
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.x'
+
+    - name: Restore
+      run: dotnet msbuild build\Build.proj -nologo -t:Restore
+
+    - name: Build
+      run: dotnet msbuild build\Build.proj -nologo -t:Build

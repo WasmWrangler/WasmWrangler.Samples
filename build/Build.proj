@@ -1,0 +1,55 @@
+<Project DefaultTargets="Build">
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+  
+  <ItemGroup>
+    <Solutions Include="$(RepositoryRootDirectory)/*.sln" />
+    <Projects Include="$(RepositoryRootDirectory)/**/*.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <BuildArgs>-nologo -v:n -c Release</BuildArgs>
+  </PropertyGroup>
+  
+  <!--
+  Clean
+  -->
+  
+  <Target Name="Clean">
+    <RemoveDir Directories="$(BinDirectory)" />
+    
+    <Exec
+      Command="dotnet clean %(Solutions.Identity) -nologo"
+      WorkingDirectory="$(RepositoryRootDirectory)" />
+  </Target>
+  
+  <!--
+  Restore
+  -->
+
+  <Target Name="Restore">    
+    <Exec
+      Command="dotnet restore %(Projects.Identity)"
+      WorkingDirectory="$(RepositoryRootDirectory)" />
+  </Target>
+  
+  <!--
+  Build
+  -->
+  
+  <Target Name="Build">
+    <Exec
+      Command="dotnet build %(Solutions.Identity) $(BuildArgs)"
+      WorkingDirectory="$(RepositoryRootDirectory)" />
+  </Target>
+
+  <!--
+  Test
+  -->
+
+  <Target Name="Test">
+    <Exec
+      Command="dotnet test %(Solutions.Identity) $(BuildArgs)"
+      WorkingDirectory="$(RepositoryRootDirectory)" />
+  </Target>
+  
+</Project>

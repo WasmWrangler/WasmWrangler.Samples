@@ -1,0 +1,9 @@
+<Project>
+  <PropertyGroup>
+    <!-- Tell WasmWrangler.targets where WasmWrangler.Build is -->
+    <WasmWranglerBuildPath>$(RepositoryRootDirectory)src/WasmWrangler.Build</WasmWranglerBuildPath>
+  </PropertyGroup>
+
+  <Import Project="$(RepositoryRootDirectory)src/WasmWrangler/build/WasmWrangler.props" />
+  <Import Project="$(RepositoryRootDirectory)src/WasmWrangler/build/WasmWrangler.targets" />
+</Project>

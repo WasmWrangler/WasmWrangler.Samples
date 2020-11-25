@@ -1,0 +1,25 @@
+<Project>
+  <PropertyGroup>
+    <!-- Tells Visual Studio to always run MSBuild. -->
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+    
+    <!-- C# settings -->
+    <LangVersion>9.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
+    <!-- Build settings -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <RepositoryRootDirectory>$(MSBuildThisFileDirectory)</RepositoryRootDirectory>
+    <BinDirectory>$(RepositoryRootDirectory)bin/</BinDirectory>
+    <OutputPath>$([System.IO.Path]::GetFullPath('$(BinDirectory)'))/$(Configuration)/$(MSBuildProjectName)</OutputPath>
+
+    <!-- Mono Wasm SDK packager.exe will need all DLLs to be available -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- WasmWrangler Version -->
+    <PackageReference Include="WasmWrangler" Version="0.0.2" />
+  </ItemGroup>
+</Project>

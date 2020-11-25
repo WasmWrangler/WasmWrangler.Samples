@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WasmWrangler.Samples", "WasmWrangler.Samples", "{B7603442-C8A0-4070-92BF-6B9138D8C7CE}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{71A4AF3F-0901-4DEA-9AE4-A9FDA64BD404}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "src\HelloWorld\HelloWorld.csproj", "{D94D9A80-E015-4E8D-9A0C-1CD73933A543}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{C604D55D-B030-4672-9BF1-97492B6E3249}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{07A23BC1-3913-4C97-9C0B-551DCEFEC9DB}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{B4027CA5-51CA-4BEF-8E99-1DD736C4AB76}"
+	ProjectSection(SolutionItems) = preProject
+		build\Build.proj = build\Build.proj
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Debug|x64.Build.0 = Debug|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Debug|x86.Build.0 = Debug|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Release|x64.ActiveCfg = Release|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Release|x64.Build.0 = Release|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Release|x86.ActiveCfg = Release|Any CPU
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71A4AF3F-0901-4DEA-9AE4-A9FDA64BD404} = {B7603442-C8A0-4070-92BF-6B9138D8C7CE}
+		{D94D9A80-E015-4E8D-9A0C-1CD73933A543} = {71A4AF3F-0901-4DEA-9AE4-A9FDA64BD404}
+		{C604D55D-B030-4672-9BF1-97492B6E3249} = {B7603442-C8A0-4070-92BF-6B9138D8C7CE}
+		{07A23BC1-3913-4C97-9C0B-551DCEFEC9DB} = {C604D55D-B030-4672-9BF1-97492B6E3249}
+		{B4027CA5-51CA-4BEF-8E99-1DD736C4AB76} = {B7603442-C8A0-4070-92BF-6B9138D8C7CE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB6D14CA-F2C4-4F9D-AF99-B64190B37692}
+	EndGlobalSection
+EndGlobal
