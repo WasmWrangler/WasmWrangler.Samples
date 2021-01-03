@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WasmWrangler.Samples", "WasmWrangler.Samples", "{B7603442-C8A0-4070-92BF-6B9138D8C7CE}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		Directory.Build.props = Directory.Build.props
 		Readme.md = Readme.md
 	EndProjectSection
